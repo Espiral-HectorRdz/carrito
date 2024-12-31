@@ -638,7 +638,7 @@ export default function Carrito() {
                   </div>
                 </div>
               </div>
-            )) : (
+            )) : ( 
               <div className={styles.div_carritoVacio}>
                 <h4>Agrega articulos al carrito, y los veras aqui.</h4>
                 <p><IoCartOutline /></p>
