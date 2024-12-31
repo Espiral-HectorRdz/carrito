@@ -1,0 +1,46 @@
+@import url(../../index.css);
+.menu_contenedor{
+    background-color: var(--color-gris);
+    height: auto;
+    min-height: 100vh;
+    padding-top: 5rem;
+    border-top: solid 1px rgb(218, 218, 218);
+}
+.menu_container{
+    padding: 2rem;
+    border-top-right-radius: .5rem;
+    position: absolute;
+    z-index: 2;
+    top: 10;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(163, 163, 163, 0.8);
+    width: 80%;
+    max-width: 15rem;
+}
+.menu_dom{
+    opacity: 0;
+    transform: translateX(70px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.menu_dom.mostrar_menu{
+    opacity: 1;
+    transform: translateX(0);
+}
+.overlay {
+    position: fixed; /* Fija el overlay en la pantalla */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro semitransparente */
+    z-index: 1; /* Asegúrate de que esté por encima de otros elementos */
+    opacity: 0; /* Comienza completamente transparente */
+    visibility: hidden; /* Oculto por defecto */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Añadir transición */
+}
+
+.mostrar_menu .overlay {
+    opacity: 1; /* Hacer visible */
+    visibility: visible; /* Permitir interacción */
+}

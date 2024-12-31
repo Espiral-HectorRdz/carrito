@@ -1,0 +1,388 @@
+@import url("../../index.css");
+
+.container {
+    background-color: var(--color-gris);
+    box-shadow: 0 3px 5px rgba(136, 136, 136, 0.3);
+    /* Sombra ligera */
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.div_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.div_menu img{
+    margin-left: .5rem;
+    width: 4rem;
+    height: 2.5rem;
+    border-radius: .7rem;
+}
+.menu_container {
+    border-top-right-radius: .5rem;
+    position: absolute;
+    z-index: 2;
+    top: -4rem;
+    left: 0;
+    color: black;
+    height: 100vh;
+    background-color: var(--color-gris);
+    width: 80%;
+    max-width: 15rem;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu_dom {
+    opacity: 0;
+    transform: translateX(-70px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu_dom.mostrar_menu {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.overlay {
+    position: fixed;
+    /* Fija el overlay en la pantalla */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color negro semitransparente */
+    z-index: 1;
+    /* Asegúrate de que esté por encima de otros elementos */
+    opacity: 0;
+    /* Comienza completamente transparente */
+    visibility: hidden;
+    /* Oculto por defecto */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    /* Añadir transición */
+}
+
+.mostrar_menu .overlay {
+    opacity: 1;
+    /* Hacer visible */
+    visibility: visible;
+    /* Permitir interacción */
+}
+
+.div_usuario {
+    margin: 4rem 1rem 2rem 1rem;
+    padding-left: .5rem;
+    background-color: white;
+    text-align: center;
+    border-radius: .3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .3rem;
+    border: solid 1px rgb(167, 167, 167);
+}
+
+.close_menu {
+    position: absolute;
+    top: .8rem;
+    left: .5rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    padding: .8rem;
+    display: flex;
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--color-gris);
+        filter: brightness(.75);
+    }
+}
+
+.salir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    color: var(--text-color);
+    background-color: var(--color-blanco);
+    filter: brightness(.9);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.usuario {
+    font-weight: normal;
+}
+
+.usuario span {
+    text-transform: uppercase;
+}
+
+.div_opciones {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: white;
+    height: 100vh;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: max-content;
+    padding: .3rem 1.5rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: all .3s;
+    color: var(--color-principal);
+}
+
+.div_personalizacion {
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+
+.div_personalizacion h5 {
+    font-weight: lighter;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.colores {
+    display: flex;
+    gap: 1rem;
+}
+
+.colores div {
+    border: solid 1.5px black;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.rojo {
+    background-color: #ad0b0b;
+}
+
+.azul {
+    background-color: #0087c5;
+}
+
+.verde {
+    background-color: #148868;
+}
+
+.grises {
+    background-color: rgb(226, 226, 226);
+}
+
+.div_opciones div p {
+    padding-left: .5rem;
+    border-left: solid 3px var(--color-principal);
+    transition: all .3s;
+}
+
+.div_opciones div p:hover {
+    color: var(--color-principal);
+    filter: brightness(.7);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+@media(min-width: 1000px) {
+    .nav {
+        padding: 0 2rem;
+    }
+}
+
+.buscar_contenedor {
+    opacity: 0;
+    /* Comienza invisible */
+    transition: opacity 0.5s ease;
+    /* Transiciones */
+}
+
+.activeInput {
+    opacity: 1;
+    /* Totalmente visible */
+    transform: translateY(0);
+    /* Se mueve a su posición original */
+}
+
+.buscar_contenedor input {
+    padding: .5rem;
+    border-radius: .3rem;
+    border: solid 1px rgb(128, 128, 128);
+}
+
+.div_busca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.div_busca input {
+    width: 70%;
+    max-width: 20rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 2rem;
+    padding: .3rem 1rem;
+    border: solid 2px rgb(196, 196, 196);
+}
+
+.div_busca input:focus {
+    border: solid 2px rgb(49, 173, 255);
+    outline: none;
+}
+
+.div_busca div {
+    position: absolute;
+    background-color: red;
+    font-size: 1rem;
+    padding: .3rem;
+    border-radius: .2rem;
+    top: -.8rem;
+    right: -.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+.div_busca div p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.modal_busqueda {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: max-content;
+    background-color: rgba(109, 109, 109, 0.5);
+    padding: .7rem;
+    border-radius: 5px;
+    /* Bordes redondeados opcionales */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    display: flex;
+    box-shadow: 0 3px 5px rgba(136, 136, 136, 0.3);
+    /* Sombra ligera */
+}
+
+
+.disabled {
+    pointer-events: none;
+    /* Desactiva todos los eventos de puntero */
+    opacity: 0.5;
+    /* O puedes usar un efecto visual como la opacidad */
+}
+
+.nav h2 {
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.iconos_contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    font-size: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    transition: all .2s;
+}
+
+.menu:hover {
+    background-color: var(--color-gris);
+    filter: brightness(.93);
+    cursor: pointer;
+}
+
+.carrito {
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: all .3s;
+    position: relative;
+}
+
+.carrito:hover {
+    background-color: var(--color-gris);
+    filter: brightness(.93);
+    cursor: pointer;
+}
+
+.buscar {
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: all .3s;
+    position: relative;
+}
+
+.buscar:hover {
+    background-color: var(--color-gris);
+    filter: brightness(.93);
+    cursor: pointer;
+}
+
+.carrito span {
+    font-size: .8rem;
+    padding: .3rem;
+    background-color: var(--color-rojo);
+    margin: 0;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 6px;
+}
+
+.active {
+    background-color: var(--color-gris);
+    filter: brightness(.93);
+}

@@ -1,0 +1,84 @@
+.modal_lotes_content{
+    display: flex;
+    flex-direction: column;
+}
+.modal_lotes{
+    position:fixed;
+    z-index: 1001;
+    background-color: white;
+    padding: 1rem 2rem 2rem 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    width: 95%;
+    margin: 0 auto;
+    border-radius: .5rem;
+    overflow-y: scroll;
+}
+.lotes_div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem; /* Espacio entre cada lote */
+    max-width: 40rem;
+    margin-bottom: 2rem;
+}
+
+.lote {
+    border: solid 2px rgb(207, 207, 207);
+    padding: .2rem 1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%; /* Asegura que cada lote use todo el ancho disponible */
+}
+.lote.selected{
+    border: solid 2px var(--color-principal);
+}
+.lote_row{
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    width: 100%; /* Asegura que cada lote use todo el ancho disponible */
+}
+.lote_row span{
+    font-weight: bold;
+}
+.lote_input{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: .5rem;
+}
+.lote_input input{
+    width: 4rem;
+    font-size: 1rem;
+    border: none;
+    text-align: center;
+    border-bottom: solid 1.5px gray;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+.lote_input input:focus{
+    border: none;
+    border-bottom: solid 2px var(--color-principal);
+}
+.lote_radio {
+    display: flex;
+    justify-content: start;
+    gap: 0;
+    align-items: center; /* Centra el radio y el texto verticalmente */
+}
+
+.lotes_div input[type="radio"] {
+    width: 20px; /* Ancho del botón de opción */
+    height: 20px; /* Alto del botón de opción */
+    margin: 0;
+}
+
+.lotes_div label {
+    font-size: 1rem;
+    position: relative;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el texto */
+}

@@ -1,0 +1,48 @@
+.todos_contenedor{
+    margin: 1rem auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+@media(min-width:1000px){
+    .todos_contenedor{
+        padding-top: 10rem;
+    }
+}
+.productos_contenedor{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 2rem auto;
+    gap: 1rem;
+    text-align: center;
+}
+@media (min-width: 600px){
+    .productos_contenedor{
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 600px;
+        margin: 2rem auto;
+    }
+}
+.producto_contenedor{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    border: solid 1px rgb(207, 207, 207);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+.producto_precio{
+    font-weight: bold;
+}
+.producto_descuento{
+    font-size: .9rem;
+}
+.producto_imagen{
+    width: 100%;
+    background-color: var(--color-gris);
+}

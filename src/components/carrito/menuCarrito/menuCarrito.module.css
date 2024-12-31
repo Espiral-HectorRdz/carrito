@@ -1,0 +1,84 @@
+@import url(../../../index.css);
+.close_icon{
+    position: absolute;
+    padding: 1rem;
+    right: 0;
+    top: 0;
+    color: black;
+    font-size: 1.5rem;
+    width: max-content;
+    cursor: pointer;
+}
+.menu_container{
+    padding: 0 2rem;
+    color: black;
+    h5{
+        margin: 0;
+        text-align: center;
+        font-weight: lighter;
+        font-size: 2rem;
+    }
+}
+.opciones{
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    p{
+        text-align: left;
+        border-radius: .3rem;
+        border: solid 1px white;
+        padding: .5rem;
+        font-size: 1.2rem;
+        transition: all .3s;
+    }
+    p:hover{
+        color: var(--color-principal);
+        border: solid 1px var(--color-principal);
+        cursor: pointer;
+    }
+}
+
+.cameraContainer{
+    position: fixed;
+    left: 50%; 
+    width: 80%;
+    transform: translateX(-50%);
+    border: solid 2px gray;
+    border-radius: .5rem;
+}
+.cameraContainer video{
+    width: 100%;
+}
+.cameraContainer h4{
+    padding: .3rem 0;
+    background-color: var(--color-gris);
+}
+.cameraContainer button{
+    width: 100%;
+    margin-top: .5rem;
+    border-radius: .5rem;
+}
+
+.tipoDocumento{
+    border: solid 1px gray;
+    border-radius: .3rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    label{
+        font-size: 1.1rem;
+        font-weight: normal;
+        padding: .5rem 1rem;
+        background-color: var(--color-gris);
+        color: var(--text-color);
+    }
+    .opciones{
+        margin: 0;
+        margin-top: .5rem;
+        padding: .5rem;
+    }
+}

@@ -1,0 +1,238 @@
+@import url(../../index.css);
+
+.inicio_container {
+    padding-top: 5rem;
+    background-color: var(--color-gris);
+    height: 100vh;
+    color: black;
+}
+
+.div_form{
+    position: relative;
+    margin: 0 2rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}   
+
+.div_form button{
+    border-radius: .5rem;
+}
+.div_form div, .div_form select{
+    position: relative;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+.div_form div input{
+    font-size: 1rem;
+}
+.buscar{
+    position: absolute;
+    bottom: 1px;
+    right: -2.4rem;
+    font-size: 1.5rem;
+    background-color: var(--color-principal);
+    color: white;
+    display: flex;
+    padding: .2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.add{
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    font-size: 1.5rem;
+    background-color: rgb(70, 160, 84);
+    color: white;
+    display: flex;
+    padding: .2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.resultados_lista{
+    position: absolute;
+    top: 100%;
+    background-color: white;
+}
+
+.selected {
+    background-color: #d1e7fd; 
+    color: #0056b3;
+}
+
+.lista_clientes {
+    margin: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    list-style: none;
+    padding: 0;
+    background-color:rgb(255, 255, 255);
+    position: absolute;
+    top: 94%;
+    left: 0;
+    width: 100%;
+    max-height: 10rem;
+    overflow-y: auto;
+    border: solid 1px rgb(192, 192, 192);
+    z-index: 1000; 
+    box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.lista_clientes li {
+    border: solid 1px rgb(196, 196, 196);
+    text-align: center;
+    padding: 0.3rem; /* Espaciado interno */
+    cursor: pointer; /* Indica que es clickeable */
+    font-size: .9rem;       
+}
+
+.lista_clientes li:hover {
+    background-color: #f0f0f0; /* Resaltar al pasar el mouse */
+}
+.textarea {
+    font-size: 1rem;
+    resize: none;
+    filter: brightness(1);
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+.div_observaciones{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+.div_fecha{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+.div_fecha input{
+    font-size: 1rem;
+}
+.alerta_cliente{
+    background-color: rgb(201, 26, 26);
+    color: white;
+    padding: .3rem;
+    border-radius: .5rem;
+    text-align: center;
+    transition: all 0.5s ease, opacity 0.5s ease;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.alerta_cliente.mostrar_alerta{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.div_usuario{
+    font-size: .9rem;
+    padding-left: .5rem;
+    margin: 0 auto 1rem auto;
+    border: solid 1px rgb(202, 202, 202);
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .3rem;
+    background-color: white;
+}
+.div_usuario span{
+    font-weight: bold;
+}
+.div_usuario p:last-child{
+    cursor: pointer;
+    text-decoration: underline;display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: .3rem;
+    transition: all .3s;
+}
+.div_usuario p:last-child:hover{
+    background-color: white;
+    filter: brightness(.9);
+}
+
+
+.div_cargando {
+    margin: 2rem auto 3rem auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+.cargando{
+    text-align: center;
+    font-size: 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.tipo_pedido{
+    border: solid 2px rgb(197, 197, 197);
+    padding: .3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    width: 85%;
+}
+.div_pedidos {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    color: white;
+    font-size: 1.3rem;
+    label{
+        display: flex;
+        justify-content: left;
+        color: white;
+        gap: .5rem;
+        border: solid 1px gray;
+        padding: .5rem;
+        border-radius: .5rem;
+        &:hover{
+            filter:contrast(.9);
+            color: white;
+        }
+        input{
+            width: max-content;
+            display: flex;
+            margin: 0;
+            width: 1.1rem;
+        }
+    }
+    
+}
+.div_pedidos label p{
+    color: white;
+}
+.comedor_option{
+    background-color: #8b109b;
+}
+.domicilio_option{
+    background-color: #0ebb3a;
+}
+.pasa_option{
+    background-color: #0056b3;
+}
+.directa_option{
+    background-color: #da3232;
+}
+
+.arrowDown{
+    font-size: 1.5rem;
+}

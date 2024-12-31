@@ -1,0 +1,47 @@
+@import url(../../../index.css);
+
+.div_form{
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+
+        input{
+            font-size: 1.1rem;
+        }
+    }
+    .div_botones{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        button, p{
+            background-color: var(--color-principal);
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-radius: .3rem;
+            cursor: pointer;
+        }
+        p{
+            background-color: rgb(159, 159, 159);
+        }
+    }
+}
+
+.alert{
+    background-color: var(--color-rojo);
+    color: white;
+    padding: 5px 8px;
+    font-weight: normal;
+    text-align: center;
+    border-radius: .3rem;
+}
+
+

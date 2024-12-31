@@ -1,0 +1,40 @@
+@import url(../../../index.css);
+.div_botones{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 1rem auto;
+    gap: .5rem;
+    button{
+        width: 100%;
+        display: flex;
+        border-radius: .3rem;
+    }
+    button:nth-child(1){
+        background-color: rgb(172, 172, 172);
+    }
+}
+.cameraContainer{
+    position: relative;
+}
+.eliminarBtn{
+    position: absolute;
+    top: 5.3rem;
+    right: 1.5rem;
+    padding: .4rem .5rem;
+    background-color: var(--color-rojo);
+    border-radius: .2rem;
+    &:hover{
+        background-color: var(--color-rojo);
+    }
+}
+.tomarDenuevo{
+    width: 90%;
+    border-radius: .3rem;
+}
+.mensaje{
+    text-align: center;
+    font-size: 1.3rem;
+    max-width: 80%;
+    margin: 0 auto;
+}

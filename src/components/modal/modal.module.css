@@ -1,0 +1,674 @@
+@import url(../../index.css);
+
+
+.btn_cerrar {
+    position: absolute;
+    z-index: 1001;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    border-radius: .2rem;
+    padding: .1rem;
+    background-color: var(--color-rojo);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.container {
+    position: relative;
+}
+
+.div_cargando {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.cargando {
+    text-align: center;
+    font-size: 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    max-width: 600px;
+    color: black;
+    max-height: 90%;
+    overflow-y: auto;
+    margin: 0 auto;
+    height: max-content;
+    background: white;
+    z-index: 1000;
+    border-radius: 5px;
+    min-height: 300px;
+}
+
+.modal button {
+    width: 90%;
+    margin: .5rem auto 1.5rem auto;
+    margin-top: 2rem;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width: 768px) {
+    .contenido {
+        border: solid 1px gray;
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+}
+
+.div_modal {
+    padding: 2rem 1rem;
+    margin-top: 2.5rem;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+@media(min-width: 768px) {
+    .div_modal {
+        justify-content: space-between;
+        padding: 2rem 4rem;
+        gap: 1rem;
+    }
+}
+
+.campos {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+@media(min-width:600px) {
+    .campos img {
+        max-width: 60%;
+    }
+}
+
+.campos input {
+    width: 5rem;
+}
+
+.campos div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 20rem;
+    gap: 1rem;
+}
+
+/*.campos div p{
+    font-size: 1.5rem;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+*/
+.campos input,
+textarea {
+    padding: .3rem;
+    font-size: 1.3rem;
+    border: none;
+    background-color: white;
+    filter: brightness(1);
+    font-family: "Roboto", sans-serif;
+}
+
+.campos label {
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+.campos textarea {
+    resize: none;
+}
+
+.articulo_nombre {
+    background-color: var(--color-gris);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    border-bottom: solid 1px rgb(206, 206, 206);
+}
+
+.articulo_nombre h5 {
+    color: var(--text-color);
+    margin: 0 auto;
+    max-width: 80%;
+    padding: .8rem;
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.articulo_img {
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    height: 10rem;
+    margin-top: 1rem;
+    border-radius: .3rem;
+}
+
+.articulo_descripcion {
+    text-align: justify;
+    margin: 1rem .5rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.articulo_precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.div_campos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.div_campos div {
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: normal;
+    justify-content: space-between;
+}
+
+.div_campos div input {
+    height: 1.8rem;
+    width: 5rem;
+    border: none;
+    background-color: white;
+    filter: brightness(1);
+    text-align: center;
+    border-radius: 0;
+    border-bottom: solid 1.5px gray;
+    font-size: 1.2rem;
+}
+
+.div_campos div input:focus {
+    border: none;
+    border-bottom: solid 2px var(--color-principal);
+}
+
+.div_campos fieldset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+}
+
+.div_campos fieldset p {
+    background-color: var(--color-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    cursor: pointer;
+    color: white;
+    width: 1.5rem;
+    height: 1.8rem;
+    font-size: 1.2rem;
+}
+
+.restar_button {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.sumar_button {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.obligatorios {
+    margin-top: .5rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: var(--color-rojo);
+    width: 100%;
+    max-width: 300px;
+    padding: .3rem;
+    border-radius: .2rem;
+}
+
+.total {
+
+    color: var(--color-principal);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.total h3 {
+    background-color: white;
+    filter: brightness(1);
+    color: black;
+    margin: .5rem auto;
+    padding: 0;
+}
+
+.seleccionar_lote {
+    background-color: rgb(70, 145, 206);
+    color: white;
+    padding: .4rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.div_agregar_opcion {
+    position: absolute;
+    right: 1rem;
+    top: 3.2rem;
+
+    .boton_opciones {
+        display: flex;
+        background-color: rgb(105, 154, 245);
+        padding: .4rem;
+        border-radius: .3rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+}
+
+.div_agregar_opcion {
+    top: 4rem;
+}
+
+.div_opciones {
+    position: absolute;
+    right: 0rem;
+    width: max-content;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: .3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+    p {
+        padding: .5rem 2.5rem .5rem 1rem;
+        text-align: left;
+        border: solid .1px rgb(230, 230, 230);
+        border-radius: .3rem;
+        cursor: pointer;
+    }
+
+    p:hover {
+        background-color: rgb(238, 238, 238);
+    }
+}
+
+.disponibles {
+    background-color: none;
+    font-size: .5;
+    text-align: right;
+    display: flex;
+    justify-content: right;
+}
+
+.disponibles span {
+    font-weight: bold;
+}
+
+.modal_notas {
+    position: fixed;
+    z-index: 1001;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    width: 90%;
+    border-radius: .5rem;
+    max-width: 600px;
+}
+
+.div_notas {
+    display: flex;
+    flex-direction: column;
+}
+
+.div_nota {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    margin-bottom: 1rem;
+}
+
+.modal_notas h5 {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+.notas_guardadas {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.notas_guardadas p {
+    border: solid 1px gray;
+    padding: .3rem;
+    border-radius: .3rem;
+}
+
+.div_lotes_notas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    place-items: center;
+    margin: 1rem auto 1.5rem auto;
+}
+
+.div_lotes_notas.col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    margin: 1rem auto 1.5rem auto;
+}
+
+
+
+.div_lotes_notas div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    border: solid 1px gray;
+    padding: .3rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.mensaje_lotes {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .mensaje_lotes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.lotes_div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: .3rem;
+    max-width: 40rem;
+    height: max-content;
+    margin: 0 auto;
+}
+
+@media(min-width: 600px) {
+    .lotes_div {
+        grid-template-columns: repeat(2, 1fr);
+        border: solid 1px gray;
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+}
+
+.lote {
+    border: solid 2px rgb(207, 207, 207);
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+    display: flex;
+    width: 100%;
+    /* Asegura que cada lote use todo el ancho disponible */
+    max-width: 120px;
+}
+
+.lote.selected {
+    border: solid 2px var(--color-principal);
+}
+
+.lote_row {
+    display: flex;
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos */
+    align-items: center;
+    /* Alinea verticalmente los elementos en el centro */
+    width: 100%;
+    /* Asegura que cada lote use todo el ancho disponible */
+}
+
+.lote_row span {
+    font-weight: bold;
+}
+
+.lote_input {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: .5rem;
+}
+
+.lote_input input {
+    width: 4.5rem;
+    font-size: 1rem;
+    border: none;
+    text-align: center;
+    border-bottom: solid 1.5px gray;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.lote_input input:focus {
+    border: none;
+    border-bottom: solid 2px var(--color-principal);
+}
+
+.lotes_div input[type="radio"] {
+    width: 20px;
+    /* Ancho del botón de opción */
+    height: 20px;
+    /* Alto del botón de opción */
+    margin: 0;
+}
+
+.card_lotes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.div_precio p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+/*CLASES KIT*/
+.container_header{
+    display: grid;
+    grid-template-columns: 1.5fr 5.5fr;
+    margin: 0 auto;
+    padding: 1rem .5rem 2.5rem .5rem;
+    gap: 1rem;
+    width: max-content;
+}
+.div_imagen{
+    margin: 0 auto;
+    img{
+        width: 5rem;
+    }
+}
+@media(min-width: 768px){
+    .div_imagen{
+        img{
+            width: 7rem;
+        }
+    }
+}
+.div_headerKit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 1.3rem;
+    gap: 1rem;
+    width: max-content;
+    width: 100%;
+    div {
+        display: flex;
+        align-items: end;
+    }
+
+    input {
+        width: 3rem;
+        padding: 0;
+        margin-left: .5rem;
+        font-size: 1.4rem;
+        border: none;
+        border-bottom: solid 1px black;
+        border-radius: 0;
+    }
+
+    input:focus {
+        border: none;
+        border-bottom: solid 1px black;
+    }
+}
+.div_componentes{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: scroll;
+    max-height: 25rem;
+    padding: 2rem 0;
+}
+@media(min-width:768px){
+    .div_componentes{
+        max-height: 35rem;
+    }
+}
+.componente {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px rgb(177, 177, 177);
+    gap: 1rem;
+    align-items: center;
+    box-shadow: 1px 10px 10px 1px rgba(0, 0, 0, 0.25);
+    margin: 0 1rem;
+    border-radius: .5rem;
+}
+
+@media(min-width: 768px) {
+    .componente {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+.div_infoKit {
+    display: flex;
+    background-color: var(--color-gris);
+    color: var(--text-color);
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    gap: .5rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    padding: .1rem 0;
+    p{
+        font-weight: normal;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+}
+.div_infoKit p:nth-child(1){
+
+}
+
+.div_lotesKit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    input {
+        width: 3rem;
+    }
+}
+.lote_kit {
+    border: solid 1px gray;
+    padding: .3rem;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+    div{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+    input{
+        font-size: 1.2rem;
+    }
+}

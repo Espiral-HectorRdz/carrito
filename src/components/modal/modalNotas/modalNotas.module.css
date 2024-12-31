@@ -1,0 +1,68 @@
+@import url(../../../index.css);
+
+.div_notas{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 1rem 1rem 1rem;
+}
+.div_nota{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    margin-bottom: 1rem;
+}
+.div_nota textarea{
+    font-size: 1rem;
+    resize: none;
+}
+.div_notas_guardadas h5{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+.notas_guardadas{
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+.notas_guardadas p{
+    border: solid 1px gray;
+    padding: .3rem;
+    border-radius: .3rem;
+}
+.div_lotes_notas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+    place-items: center;
+    margin: 1rem auto 1.5rem auto;
+}
+.titulo{
+    padding: 1rem;
+    background-color: var(--color-gris);
+    color: var(--text-color);
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+
+.div_botones{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 1rem auto;
+    gap: .5rem;
+    button{
+        width: 100%;
+        display: flex;
+        border-radius: .3rem;
+    }
+    button:nth-child(1){
+        background-color: rgb(172, 172, 172);
+    }
+}
